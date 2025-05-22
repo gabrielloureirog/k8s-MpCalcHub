@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "60388d16-1680-4689-97f2-aa10bf02231e",
+		"name": "MPAZFunction",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14096823"
+	},
+	"item": [
+		{
+			"name": "http://localhost:7072/api/GetContactByDDDHttpTrigger?ddd=11",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7072/api/GetContactByDDDHttpTrigger?ddd=11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7072",
+					"path": [
+						"api",
+						"GetContactByDDDHttpTrigger"
+					],
+					"query": [
+						{
+							"key": "ddd",
+							"value": "11"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7072/api/GetContactByIdHttpTrigger?id=6434981a-c05a-4936-8f2d-b0aa1cc6a16e",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7072/api/GetContactByIdHttpTrigger?id=6434981a-c05a-4936-8f2d-b0aa1cc6a16e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7072",
+					"path": [
+						"api",
+						"GetContactByIdHttpTrigger"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "6434981a-c05a-4936-8f2d-b0aa1cc6a16e"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7072/api/GetContactsHttpTrigger",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7072/api/GetContactsHttpTrigger",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7072",
+					"path": [
+						"api",
+						"GetContactsHttpTrigger"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

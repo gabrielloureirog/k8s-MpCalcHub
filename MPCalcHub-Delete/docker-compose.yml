@@ -1,0 +1,23 @@
+version: '3.0'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5057:80"
+    container_name: app-mp-calc-removed-api
+    networks:
+      mp-micro-services:
+        ipv4_address: 172.30.0.9
+    volumes:
+      - mpcalc-volume:/App/data
+
+volumes:
+  mpcalc-volume:
+    external: true
+
+networks:
+  mp-micro-services:
+    external:
+      name: mpcalchub-microservices_mp-micro-services

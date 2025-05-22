@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sqlserver-fiap
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sqlserver-fiap
+  template:
+    metadata:
+      labels:
+        app: sqlserver-fiap
+    spec:
+      containers:
+      - name: sqlserverfiap 
+        image: mcr.microsoft.com/mssql/server
+        env:
+        - name: ACCEPT_EULA
+          value: "Y"
+        - name: SA_PASSWORD
+          value: "@fiap2024"
+        ports:
+        - containerPort: 1433

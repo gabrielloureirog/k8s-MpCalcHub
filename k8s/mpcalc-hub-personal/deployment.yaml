@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mpcalc-hub-personal
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mpcalc-hub-personal
+  template:
+    metadata:
+      labels:
+        app: mpcalc-hub-personal
+    spec:
+      containers:
+      - name: app-mp-calc-api
+        image: mpcalchub-personal-app:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 5056
+        volumeMounts:
+        - name: appsettings-volume
+          mountPath: /config/appsettings.json
+          subPath: appsettings.json
+      volumes:
+      - name: appsettings-volume
+        configMap:
+          name: mpcalc-config

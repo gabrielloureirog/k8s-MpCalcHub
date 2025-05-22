@@ -1,0 +1,6 @@
+@MPCalcHub.Api_HostAddress = http://localhost:5056
+
+GET {{MPCalcHub.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

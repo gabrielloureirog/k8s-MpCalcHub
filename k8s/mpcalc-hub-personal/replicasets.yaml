@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: mpcalc-hub-personal-replicaset
+  labels:
+    app: mpcalc-hub-personal-replicaset
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mpcalc-hub-personal-replicaset
+  template:
+    metadata:
+      labels:
+        app: mpcalc-hub-personal-replicaset
+    spec:
+      containers:
+      - name: app-mp-calc-api
+        image: mpcalchub-personal-app:latest
+        ports:
+        - containerPort: 5056

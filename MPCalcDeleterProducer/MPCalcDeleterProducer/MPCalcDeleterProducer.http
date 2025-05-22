@@ -1,0 +1,6 @@
+@MPCalcDeleterProducer_HostAddress = http://localhost:5253
+
+GET {{MPCalcDeleterProducer_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
