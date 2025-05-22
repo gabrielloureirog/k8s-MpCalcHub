@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mpcalc-register-producer
+  name: mpcalchub-register-producer
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: mpcalc-register-producer
+      app: mpcalchub-register-producer
   template:
     metadata:
       labels:
-        app: mpcalc-register-producer
+        app: mpcalchub-register-producer
     spec:
       containers:
-      - name: mpcalc-register-producer
-        image: mpcalc-register-producer:latest
+      - name: mpcalchub-register-producer
+        image: mpcalchub-register-producer:latest
         imagePullPolicy: Never
         ports:
         - containerPort: 80

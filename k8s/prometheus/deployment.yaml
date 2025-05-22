@@ -14,8 +14,8 @@ spec:
     spec:
       containers:
       - name: prometheus
-        image: prom/prometheus
-        imagePullPolicy: Never
+        image: prom/prometheus:latest
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9090
         envFrom:

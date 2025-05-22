@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mpcalc-deleter-producer
+  name: mpcalchub-deleter-producer
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: mpcalc-deleter-producer
+      app: mpcalchub-deleter-producer
   template:
     metadata:
       labels:
-        app: mpcalc-deleter-producer
+        app: mpcalchub-deleter-producer
     spec:
       containers:
-      - name: mpcalc-deleter-producer
-        image: mpcalc-deleter-producer:latest
+      - name: mpcalchub-deleter-producer
+        image: mpcalchub-deleter-producer:latest
         imagePullPolicy: Never
         ports:
         - containerPort: 80

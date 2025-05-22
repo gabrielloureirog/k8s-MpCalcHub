@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: mpcalc-hub-delete-service
+  name: mpcalchub-delete-service
 spec:
   selector:
-    app: mpcalc-hub-delete
+    app: mpcalchub-delete
   ports:
     - protocol: TCP
       port: 80
